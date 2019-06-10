@@ -9,10 +9,10 @@
 
 In this paper, we develop a purposive artificial intelligence based formulation for the problem of general navigation. We call this AI framework "Embodied AI" - AI design based on the knowledge of agent's hardware limitations and timing/computation constraints. Following this design philosophy we develop a complete AI navigation stack for dodging multiple dynamic obstacles on a quadrotor with a monocular event camera and computation. We also present an approach to directly transfer the shallow neural networks trained in simulation to the real world by subsuming pre-processing using a neural network into the pipeline. 
 
-- Project Page
-- Paper
-- Supplementary
-- arXiv Preprint
+- [Project Page](https://prg.cs.umd.edu/EVDodge)
+- [Paper](https://prg.cs.umd.edu/research/EVDodge_files/EVDodge.pdf)
+- [Supplementary](https://prg.cs.umd.edu/research/EVDodge_files/Supplementary-EVDodge.pdf)
+- [arXiv Preprint](https://arxiv.org/abs/1906.02919)
 
 ## Publication:
 
