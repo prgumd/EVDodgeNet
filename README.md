@@ -1,5 +1,6 @@
 # EVDodge: Embodied AI for High-Speed Dodging on a quadrotor using event cameras
-**EVDodge** by <a href="http://prg.cs.umd.edu"><i>Perception & Robotics Group</i></a> at the Department of Computer Science, <a href="https://umd.edu/">University of Maryland- College Park</a> and <a href="http://rpg.ifi.uzh.ch">Robotics & Perception Group</a> at <a href="https://www.ifi.uzh.ch/en.html">University of Zurich</a>.
+**EVDodge** by <a href="http://prg.cs.umd.edu"><i>Perception & Robotics Group</i></a> at the Department of Computer Science, <a href="https://umd.edu/">University of Maryland- College Park</a> and <a href="http://rpg.ifi.uzh.ch">Robotics & Perception Group</a> at 
+<a href="https://www.ifi.uzh.ch/en.html">Department of Informatics</a>, <a href="https://www.uzh.ch/cmsssl/en.html">University of Zurich</a> & <a href="https://www.ethz.ch/en.html">ETH Zurich</a>.
 
 
 ### Code and instruction guidelines will be uploaded here on the acceptance of the paper.
