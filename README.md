@@ -6,7 +6,7 @@
 ### Code and instruction guidelines will be uploaded here on the acceptance of the paper.
 
 ###### Check out our Youtube video which depicts the proposed framework of our bio-inspired perceptual design for quadrotors.
-[![EVDodgeNet: Deep Dynamic Obstacle Dodging with event cameras](img/thumbnail.png)](https://www.youtube.com/watch?v=k1uzsiDI4hM)
+[![EVDodgeNet: Deep Dynamic Obstacle Dodging with event cameras](assets/img/thumbnail.png)](https://www.youtube.com/watch?v=k1uzsiDI4hM)
 
 Dynamic obstacle avoidance on quadrotors requires low latency. A class of sensors that are particularly suitable for such scenarios are event cameras. In this paper, we present a deep learning based solution for dodging multiple dynamic obstacles on a quadrotor with a single event camera and onboard computation. Our approach uses a series of shallow neural networks for estimating both the ego-motion and the motion of independently moving objects. The networks are trained in simulation and directly transfer to the real world without any fine-tuning or retraining.
 
