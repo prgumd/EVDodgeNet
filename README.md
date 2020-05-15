@@ -38,5 +38,8 @@ If you find our work useful please do cite us as follows:
 ### What will not be released?
 We do not plan on releasing the code for EVSegFlowNet described in the paper, nor the hardware setup tutorial (since Intel Aero quadrotor is not sold anymore) and code for the control policy. Please do not email us asking about any of the aforementioned things.
 
+## Acknowledgements
+The code for `EVHomographyNet` is based on the code from [Unsupervised Deep Homography](https://github.com/tynguyen/unsupervisedDeepHomographyRAL2018). 
+
 ## License:
 Copyright (c) 2019 Perception and Robotics Group (PRG)
