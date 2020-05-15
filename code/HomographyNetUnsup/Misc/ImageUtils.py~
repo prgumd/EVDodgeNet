@@ -1,0 +1,67 @@
+import cv2
+import numpy as np
+import random
+import skimage
+import PIL
+import sys
+# Don't generate pyc codes
+sys.dont_write_bytecode = True
+
+def RandomCrop(I1, I2, Mask1, Mask2, OutShape):
+    # I1 and I2 are assumed to be of same size
+    ImageSize = np.shape(I1)
+    RandX = random.randint(0, ImageSize[0]-OutShape[0])
+    RandY = random.randint(0, ImageSize[1]-OutShape[1])
+    I1Crop = I1[RandX:RandX+OutShape[0], RandY:RandY+OutShape[1], :]
+    I2Crop = I2[RandX:RandX+OutShape[0], RandY:RandY+OutShape[1], :]
+    Mask1Crop = Mask1[RandX:RandX+OutShape[0], RandY:RandY+OutShape[1]]
+    Mask2Crop = Mask2[RandX:RandX+OutShape[0], RandY:RandY+OutShape[1]]
+    return (I1Crop, I2Crop, Mask1Crop, Mask2Crop)
+
+def GaussianNoise(I1, I2):
+    IN1 = skimage.util.random_noise(I1, mode='gaussian', var=0.01)
+    IN1 = np.uint8(IN1*255)
+    IN2 = skimage.util.random_noise(I2, mode='gaussian', var=0.01)
+    IN2 = np.uint8(IN2*255)
+    return (IN1, IN2)
+
+def ShiftHue(I1, I2):
+    IHSV1 = cv2.cvtColor(I1, cv2.COLOR_BGR2HSV)
+    MaxShift = 30
+    RandShift = random.randint(-MaxShift, MaxShift)
+    IHSV1[:, :, 0] = IHSV1[:, :, 0] + RandShift
+    IHSV1 = np.uint8(np.clip(IHSV1, 0, 255))
+    IHSV2 = cv2.cvtColor(I2, cv2.COLOR_BGR2HSV)
+    IHSV2[:, :, 0] = IHSV2[:, :, 0] + RandShift
+    IHSV2 = np.uint8(np.clip(IHSV2, 0, 255))
+    return (cv2.cvtColor(IHSV1, cv2.COLOR_HSV2BGR), cv2.cvtColor(IHSV2, cv2.COLOR_HSV2BGR))
+
+def FlipImage(I1, I2):
+    return (cv2.flip(I1, 1), cv2.flip(I2, 1))
+
+def ShiftSat(I1, I2):
+    IHSV1 = cv2.cvtColor(I1, cv2.COLOR_BGR2HSV)
+    MaxShift = 30
+    RandShift = random.randint(-MaxShift, MaxShift)
+    IHSV1 = np.int_(IHSV1)
+    IHSV1[:, :, 1] = IHSV1[:, :, 1] + RandShift
+    IHSV1 = np.uint8(np.clip(IHSV1, 0, 255))
+    IHSV2 = cv2.cvtColor(I2, cv2.COLOR_BGR2HSV)
+    IHSV2 = np.int_(IHSV2)
+    IHSV2[:, :, 1] = IHSV2[:, :, 1] + RandShift
+    IHSV2 = np.uint8(np.clip(IHSV2, 0, 255))
+    return (cv2.cvtColor(IHSV1, cv2.COLOR_HSV2BGR), cv2.cvtColor(IHSV2, cv2.COLOR_HSV2BGR))
+
+def Gamma(I1, I2):
+    MaxShift = 2.5
+    RandShift = random.uniform(0, MaxShift)
+    IG1 = skimage.exposure.adjust_gamma(I1, RandShift)
+    IG2 = skimage.exposure.adjust_gamma(I2, RandShift)
+    return (IG1, IG2)
+    
+
+def StandardizeInputs(I):
+    I /= 255.0
+    I -= 0.5
+    I *= 2.0
+    return I
