@@ -6,7 +6,7 @@
 Please follow our [**Wiki**](https://github.com/prgumd/EVDodgeNet/wiki) for dataset download, instructions to run code and create custom dataset. Incase you don't understand something or find issues please create a GitHub issue and we'll resolve it as soon as possible. though we haven't released the hardware setup details, a guide to hardware setup used in our lab can be found [here](https://github.com/prgumd/PRGFlyt/wiki). 
 
 #### Check out our Youtube video which depicts the proposed framework of our bio-inspired perceptual design for quadrotors.
-[![EVDodgeNet: Deep Dynamic Obstacle Dodging with event cameras](assets/img/thumbnail.png)](https://www.youtube.com/watch?v=k1uzsiDI4hM)
+[![EVDodgeNet: Deep Dynamic Obstacle Dodging with event cameras](assets/img/thumbnail.png)](https://www.youtube.com/watch?v=NSwK1ZEsTOo)
 
 Dynamic obstacle avoidance on quadrotors requires low latency. A class of sensors that are particularly suitable for such scenarios are event cameras. In this paper, we present a deep learning based solution for dodging multiple dynamic obstacles on a quadrotor with a single event camera and onboard computation. Our approach uses a series of shallow neural networks for estimating both the ego-motion and the motion of independently moving objects. The networks are trained in simulation and directly transfer to the real world without any fine-tuning or retraining.
 
