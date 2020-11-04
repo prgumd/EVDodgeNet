@@ -278,8 +278,8 @@ def main():
     Parser.add_argument('--ReadPath', dest='ReadPath', default='/media/nitin/Research/EVDodge/DatasetChethanEvents/DeblurredHomography',\
                                                                              help='Path to load images from, Default:ReadPath')
     Parser.add_argument('--WritePath', dest='WritePath', default='/media/nitin/Research/EVDodge/DatasetChethanEvents/DeblurredHomographyDodgeNet',\
-    Parser.add_argument('--GPUDevice', type=int, default=0, help='What GPU do you want to use? -1 for CPU, Default:0')
                                                                              help='Path to write images to, Default:WritePath')
+    Parser.add_argument('--GPUDevice', type=int, default=0, help='What GPU do you want to use? -1 for CPU, Default:0')
 
     Args = Parser.parse_args()
     ModelPath = Args.ModelPath
