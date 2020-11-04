@@ -288,7 +288,7 @@ def main():
     GPUDevice = Args.GPUDevice
 
     # Set GPUDevice
-    tu.SetGPU(GPUDevice)
+    # tu.SetGPU(GPUDevice)
 
     # Setup all needed parameters including file reading
     TrainNames, ImageSize, PatchSize, NumTrainSamples, NumImgsStack = SetupAll(ReadPath)
