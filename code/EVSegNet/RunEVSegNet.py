@@ -22,6 +22,7 @@ import sys
 import os
 import glob
 import Misc.ImageUtils as iu
+import Misc.TFUtils as tu
 import random
 from skimage import data, exposure, img_as_float
 import matplotlib.pyplot as plt
@@ -288,7 +289,7 @@ def main():
     GPUDevice = Args.GPUDevice
 
     # Set GPUDevice
-    # tu.SetGPU(GPUDevice)
+    tu.SetGPU(GPUDevice)
 
     # Setup all needed parameters including file reading
     TrainNames, ImageSize, PatchSize, NumTrainSamples, NumImgsStack = SetupAll(ReadPath)
